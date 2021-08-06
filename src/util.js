@@ -17,3 +17,21 @@ const renderList = () => {
       });
     });
 };
+
+const postHandler = () => {
+  if (inputName.value === '' || inputScore.value === '') {
+    return;
+  }
+
+  myGame.postScore(inputName.value, inputScore.value)
+    .then(() => {
+      myGame.getScores()
+        .then((scores) => {
+          renderList(scores.result);
+        });
+    });
+  inputName.value = '';
+  inputScore.value = '';
+};
+
+export { renderList, postHandler };
