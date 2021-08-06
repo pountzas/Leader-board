@@ -233,7 +233,7 @@ input {
 }
 
 .item-shade {
-  background-color: rgb(68, 68, 110)68, 68, 110);
+  background-color: rgb(68, 68, 110);
 }
 
 @media screen and (max-width: 480px) {
