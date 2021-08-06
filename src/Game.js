@@ -18,3 +18,23 @@ class Game {
     const response = await fetch(this.url, options);
     return response.json();
   }
+
+  postScore = async (user, score) => {
+    const data = {
+      user,
+      score,
+    };
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };
+    const response = await fetch(this.url, options);
+    return response.json();
+  }
+}
+
+const MyGame = new Game(GAME_ID);
+export default MyGame;
