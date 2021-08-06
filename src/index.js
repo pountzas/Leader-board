@@ -15,5 +15,3 @@ btnSubmit.addEventListener('click', () => {
 window.addEventListener('load', () => {
   renderList();
 });
-
-document.body.appendChild(component());
