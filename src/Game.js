@@ -7,3 +7,14 @@ class Game {
       https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores/
     `;
   }
+
+  getScores = async () => {
+    const options = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+    const response = await fetch(this.url, options);
+    return response.json();
+  }
