@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Boilerplate</title>
+  <title>Leaderboard</title>
 </head>
+
 <body>
-    
+  <div class="container">
+    <h1 class="heading">Leaderboard</h1>
+    <div>
+      <div class="scores-wrapper">
+        <div>
+          <h2>Recent Scores</h2>
+          <button class="btn-refresh" type="button">Refresh</button>
+        </div>
+        <ul class="score-list">
+        </ul>
+      </div>
+      <div class="form-wrapper">
+        <h2>Add Your Score</h2>
+        <form class="score-form" action="post">
+          <input class="input-name" type="text" placeholder="Your name">
+          <input class="input-score" type="number" placeholder="Your score" min="0">
+          <button class="btn-submit" type="button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

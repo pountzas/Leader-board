@@ -1,13 +1,17 @@
 import './style.css';
+import { renderList, postHandler } from './util.js';
 
-function component() {
-  const container = document.createElement('div');
-  const header = document.createElement('h1');
+const btnRefresh = document.querySelector('.btn-refresh');
+const btnSubmit = document.querySelector('.btn-submit');
 
-  header.textContent = 'Webpack Boilerplate';
-  container.appendChild(header);
+btnRefresh.addEventListener('click', () => {
+  renderList();
+});
 
-  return container;
-}
+btnSubmit.addEventListener('click', () => {
+  postHandler();
+});
 
-document.body.appendChild(component());
+window.addEventListener('load', () => {
+  renderList();
+});
